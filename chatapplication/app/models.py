@@ -13,13 +13,14 @@ class User(Base):
 
     messages = relationship("Message", back_populates="sender")
 
+# models.py
 class Message(Base):
     __tablename__ = "messages"
 
-    id = Column(Integer, primary_key=True, index=True)
-    content = Column(Text, nullable=False)
-    room_id = Column(String, index=True)
-    timestamp = Column(DateTime, default=datetime.utcnow)
+    id = Column(Integer, primary_key=True)
+    content = Column(Text)
+    room_id = Column(String)
+    timestamp = Column(DateTime)
     user_id = Column(Integer, ForeignKey("users.id"))
 
     sender = relationship("User", back_populates="messages")
