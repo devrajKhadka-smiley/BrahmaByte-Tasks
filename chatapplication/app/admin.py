@@ -5,7 +5,7 @@ from app import models
 
 router = APIRouter(prefix="/admin", tags=["admin"])
 
-@router.get("/users")
+@router.get("/users", summary="List all users", description="Fetch a list of all registered users.")
 def list_users(db: Session = Depends(get_db), user=Depends(require_role("admin"))):
     users = db.query(models.User).all()
     return [{"id": u.id, "username": u.username, "role": u.role} for u in users]
