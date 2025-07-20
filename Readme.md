@@ -59,6 +59,14 @@ Follow these steps to set up and run the projects locally:
     ```bash
     uvicorn app.main:app --reload
     ```
+---
+
+## API Reference
+
+For a complete list of tested API endpoints and sample requests, please refer to the Postman collection linked below:
+
+🔗 **Postman Collection:**  
+[Click here to view on Postman](https://www.postman.com/sye9/workspace/public-sharing-apis/collection/34656822-16c67146-7323-42cd-9925-671fa789aaeb?action=share&creator=34656822)
 
 ---
 
